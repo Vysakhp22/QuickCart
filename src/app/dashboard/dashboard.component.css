@@ -1,0 +1,7 @@
+div{
+    margin-left: 5rem;
+    position:relative;
+}
+mat-toolbar{
+    position: sticky;
+}

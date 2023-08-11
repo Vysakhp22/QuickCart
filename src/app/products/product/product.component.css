@@ -1,0 +1,30 @@
+.example-card {
+    width: 40rem;
+    color: white;
+    margin-left: 25rem;
+    margin-top: 3rem;
+}
+
+mat-card-header {
+    display: inline;
+}
+
+mat-card-title {
+    text-align: center;
+}
+
+mat-card-content {
+    padding: 2em 2em;
+}
+
+mat-form-field {
+    display: inline;
+}
+
+mat-card-actions {
+    margin-left: 10rem;
+    margin-bottom: 1rem;
+}
+#reset{
+    margin-left: .5rem;
+}
