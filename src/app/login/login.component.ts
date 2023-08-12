@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { MyServiceService } from '../my-service.service';
+import { AuthService } from '../auth.service';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
     });
 
     constructor(private router: Router,
-        private myService: MyServiceService) { }
+        private myService: MyServiceService,
+        private authService : AuthService) { }
 
     public get f() {
         return this.loginForm.controls;
@@ -31,6 +33,7 @@ export class LoginComponent implements OnInit {
             console.log(data);
 
             if (data.userame === this.loginForm.value.email && data.password === this.loginForm.value.password) {
+                this.authService.logIn();
                 this.router.navigate(['/dashboard']);
             } else {
                 alert('Invalid username or password');
